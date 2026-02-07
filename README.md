@@ -1,4 +1,4 @@
-# dd-sec-lab (Security Test App)
+# dd-sec-test (Security Test App)
 
 `dd-sec-test` is a small, intentionally “noisy” demo application designed to generate **Datadog Security signals** (Cloud SIEM / Log Detection, and optionally runtime-style triggers) using predictable login events, HTTP endpoints, and an attack traffic generator.
 
