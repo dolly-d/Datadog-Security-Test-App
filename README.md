@@ -1,12 +1,13 @@
-# dd-sec-lab (Security Lab App)
+# dd-sec-lab (Security Test App)
 
-`dd-sec-lab` is a small, intentionally “noisy” demo application designed to generate **Datadog Security signals** (Cloud SIEM / Log Detection, and optionally runtime-style triggers) using predictable login events, HTTP endpoints, and an attack traffic generator.
+`dd-sec-test` is a small, intentionally “noisy” demo application designed to generate **Datadog Security signals** (Cloud SIEM / Log Detection, and optionally runtime-style triggers) using predictable login events, HTTP endpoints, and an attack traffic generator.
 
 It’s meant for:
 - validating log ingestion
 - testing / demoing out-of-the-box (OOTB) Cloud SIEM detections
 - generating consistent security telemetry (auth failures, suspicious requests, injection-like patterns, etc.)
 - experimenting with custom detection rules
+- optionally generate traces
 
 > ⚠️ This app intentionally generates suspicious/attack-like activity.
 
@@ -46,7 +47,8 @@ docker compose up --build
 
 ---
 
-## After running the requests above, logs and traces appear immediately. Cloud SIEM signals may take 1–5 minutes depending on detection windows.
+## After running the application, logs and traces appear should immediately. Cloud SIEM signals may take 1–5 minutes depending on detection windows.
+## I've added some example request to generate security triggering events to start with.
 
 # Health check (basic traffic)
 curl -s http://localhost:8080/health
